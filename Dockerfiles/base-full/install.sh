@@ -1,7 +1,7 @@
 #!/bin/bash
 plantform="$(uname -m)"
 PLANT_PATH=${PLANT_PATH:-/app/env/}
-plant=$PLANT_PATH_$plantform
+plant="${PLANT_PATH}_${plantform}"
 python3 -m venv $plant
 source $plant/bin/activate
 echo "使用虚拟环境: $plant"

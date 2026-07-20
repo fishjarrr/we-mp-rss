@@ -1,5 +1,6 @@
 
-FROM  --platform=$BUILDPLATFORM ghcr.io/rachelos/base-mini:latest as werss-base
+ARG BASE_MINI_IMAGE=ghcr.io/rachelos/base-mini:latest
+FROM ${BASE_MINI_IMAGE} AS werss-base
 #
 
 ENV PIP_INDEX_URL=https://pypi.tuna.tsinghua.edu.cn/simple
